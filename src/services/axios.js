@@ -1,6 +1,10 @@
 import axios from "axios";
 const BASE_URL = "http://localhost:4000"
 
-export default async function postSignUp(body){
+export async function postSignUp(body){
   return axios.post(`${BASE_URL}/signup`, body);
+}
+
+export async function postLogin(body){
+  return axios.post(`${BASE_URL}/signin`, body);
 }
