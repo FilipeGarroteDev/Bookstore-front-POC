@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import GlobalStyle from "./common/GlobalStyle";
 import Reset from "./common/Reset";
+import PrivatePage from "./components/PrivatePage/PrivatePage";
 import Checkout from "./pages/Checkout";
 import MainPage from "./pages/Mainpage";
 import SignIn from "./pages/Sign-in";
@@ -13,10 +14,24 @@ function App() {
 			<GlobalStyle />
 			<BrowserRouter>
 				<Routes>
-					<Route path="/" element={<MainPage />} />
+					<Route
+						path="/"
+						element={
+							<PrivatePage>
+								<MainPage />
+							</PrivatePage>
+						}
+					/>
 					<Route path="/sign-in" element={<SignIn />} />
 					<Route path="/sign-up" element={<SignUp />} />
-					<Route path="/checkout" element={<Checkout />} />
+					<Route
+						path="/checkout"
+						element={
+							<PrivatePage>
+								<Checkout />
+							</PrivatePage>
+						}
+					/>
 				</Routes>
 			</BrowserRouter>
 		</>

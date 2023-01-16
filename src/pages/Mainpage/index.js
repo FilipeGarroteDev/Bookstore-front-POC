@@ -1,5 +1,11 @@
+import Wrapper from "../../common/Wrapper";
+import MainContainer from "../../common/MainContainer";
+
+
 export default function MainPage() {
-	return (
-    <h1>EITAAAA</h1>
-  )
+	return <Wrapper>
+    <MainContainer>
+
+    </MainContainer>
+  </Wrapper>;
 }
