@@ -1,5 +1,13 @@
+import Wrapper from "../../common/Wrapper";
+import MainContainer from "../../common/MainContainer";
+import Menu from "../../components/Menu"
+
 export default function Checkout() {
 	return (
-    <h1>EITAAAA</h1>
-  )
+		<Wrapper>
+			<MainContainer>
+        <Menu />
+      </MainContainer>
+		</Wrapper>
+	);
 }

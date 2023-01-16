@@ -1,19 +1,27 @@
 import styled from "styled-components";
 import { AiTwotoneHome, AiFillDollarCircle } from "react-icons/ai";
 import {RiLogoutBoxFill} from "react-icons/ri"
+import { useNavigate } from "react-router-dom";
 
 export default function Menu() {
+	const navigate = useNavigate();
+
+	function logout(){
+		localStorage.clear();
+		navigate("/sign-in")
+	}
+
 	return (
 		<MenuStyle>
-			<MenuOption>
+			<MenuOption onClick={() => navigate("/")}>
 				<AiTwotoneHome />
 				<h3>Home</h3>
 			</MenuOption>
-			<MenuOption>
+			<MenuOption onClick={() => navigate("/checkout")}>
 				<AiFillDollarCircle />
 				<h3>Checkout</h3>
 			</MenuOption>
-			<MenuOption>
+			<MenuOption onClick={logout}>
 				<RiLogoutBoxFill />
 				<h3>Logout</h3>
 			</MenuOption>
