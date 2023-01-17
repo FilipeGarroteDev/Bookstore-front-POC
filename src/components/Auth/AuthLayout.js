@@ -14,7 +14,7 @@ export default styled.section`
   border-top-left-radius: 50px;
   box-shadow: 5px 10px 3px 0px rgba(0, 0, 0, 0.3);
 
-  span{
+  > span{
     font-size: 12px;
     font-weight: 400;
     color: #ffffff;

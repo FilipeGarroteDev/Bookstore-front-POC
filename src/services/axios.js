@@ -8,3 +8,7 @@ export async function postSignUp(body){
 export async function postLogin(body){
   return axios.post(`${BASE_URL}/signin`, body);
 }
+
+export async function postSocialLogin(body){
+  return axios.post(`${BASE_URL}/signin/social`, body);
+}

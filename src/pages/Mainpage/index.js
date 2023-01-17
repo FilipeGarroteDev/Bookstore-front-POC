@@ -5,12 +5,14 @@ import styled from "styled-components";
 import Catalog from "./Catalog";
 
 export default function MainPage() {
+  const name = localStorage.getItem("name");
+
 	return (
 		<Wrapper>
 			<MainContainer>
 				<Menu />
 				<ProductsPage>
-					<h1>Produtos Disponíveis</h1>
+					<h1>Produtos Disponíveis, {name}</h1>
           <Catalog />
 				</ProductsPage>
 			</MainContainer>

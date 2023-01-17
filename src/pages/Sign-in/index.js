@@ -6,6 +6,8 @@ import Button from "../../components/Auth/Button";
 import Form from "../../components/Auth/Form";
 import Wrapper from "../../common/Wrapper";
 import { postLogin } from "../../services/axios";
+import GoogleButton from "../../components/Auth/GoogleButton";
+import GitHubButton from "../../components/Auth/GitHubButton";
 
 export default function SignIn() {
 	const navigate = useNavigate();
@@ -53,6 +55,8 @@ export default function SignIn() {
 						onChange={handleInput}
 					/>
 					<Button>Entrar</Button>
+					<GoogleButton />
+					<GitHubButton />
 				</Form>
 				<span onClick={() => navigate("/sign-up")}>Efetuar cadastro</span>
 			</AuthLayout>
